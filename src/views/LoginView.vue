@@ -1,6 +1,6 @@
 <template>
-    <div>
-
+    <div class="container">
+        <LoginLogo />
     </div>
 </template>
 
