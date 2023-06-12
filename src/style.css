@@ -9,6 +9,9 @@
 }
 
 body {
-  background-color: #eee;
+  /* background-color: #eee; */
   font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
