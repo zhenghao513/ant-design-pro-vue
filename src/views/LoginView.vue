@@ -6,7 +6,9 @@
       <div class="content-inner">
         <LoginForm />
       </div>
-      <div class="footer"></div>
+      <a-layout-footer>
+        <div class="footer">Ant Design Pro</div>
+      </a-layout-footer>
     </div>
   </div>
 </template>
@@ -40,5 +42,14 @@
     right: 0;
     bottom: 0;
     width: 100%;
+  }
+
+  .container .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    color: #4e5969;
+    text-align: center;
   }
 </style>
