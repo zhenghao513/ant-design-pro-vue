@@ -3,7 +3,9 @@
     <LoginLogo />
     <LoginBanner />
     <div class="content">
-      <div class="content-inner"></div>
+      <div class="content-inner">
+        <LoginForm />
+      </div>
       <div class="footer"></div>
     </div>
   </div>
