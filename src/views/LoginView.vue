@@ -13,9 +13,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
   .container {
@@ -26,6 +24,18 @@
   .banner {
     width: 550px;
     background: linear-gradient(163.85deg, #1d2129 0%, #00308f 100%);
+  }
+
+  @media (max-width: 992px) {
+    .banner {
+      width: 25%;
+    }
+  }
+
+  @media (max-width: 412px) {
+    .banner {
+      display: none;
+    }
   }
 
   .content {

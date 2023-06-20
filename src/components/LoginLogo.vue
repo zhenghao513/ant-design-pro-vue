@@ -27,4 +27,10 @@
     color: #f7f8fa;
     font-size: 20px;
   }
+
+  @media (max-width: 412px) {
+    .logo-text {
+      color: #1d2129;
+    }
+  }
 </style>
