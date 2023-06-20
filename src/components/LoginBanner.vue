@@ -102,7 +102,7 @@
   }
 
   .carousel-item {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
