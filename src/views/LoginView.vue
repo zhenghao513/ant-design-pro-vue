@@ -16,50 +16,50 @@
 <script setup lang="ts"></script>
 
 <style scoped>
-  .container {
-    display: flex;
-    height: 100vh;
-  }
+.container {
+  display: flex;
+  height: 100vh;
+}
 
+.banner {
+  width: 550px;
+  background: linear-gradient(163.85deg, #1d2129 0%, #00308f 100%);
+}
+
+@media (max-width: 992px) {
   .banner {
-    width: 550px;
-    background: linear-gradient(163.85deg, #1d2129 0%, #00308f 100%);
+    width: 25%;
   }
+}
 
-  @media (max-width: 992px) {
-    .banner {
-      width: 25%;
-    }
+@media (max-width: 412px) {
+  .banner {
+    display: none;
   }
+}
 
-  @media (max-width: 412px) {
-    .banner {
-      display: none;
-    }
-  }
+.content {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 40px;
+}
 
-  .content {
-    position: relative;
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 40px;
-  }
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
 
-  .footer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-  }
-
-  .container .footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    color: #4e5969;
-    text-align: center;
-  }
+.container .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  color: #4e5969;
+  text-align: center;
+}
 </style>

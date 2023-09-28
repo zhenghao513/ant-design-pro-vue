@@ -1,3 +1,7 @@
 {
-  "extends": ["eslint-config-ali/typescript/vue", "prettier", ".eslintrc-auto-import.json"]
+  "extends": [
+    "eslint-config-ali/typescript/vue",
+    "prettier",
+    ".eslintrc-auto-import.json"
+  ]
 }

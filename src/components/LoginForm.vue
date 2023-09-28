@@ -16,7 +16,9 @@
           v-model:value="formState.username"
           placeholder="用户名：admin"
         >
-          <template #prefix><UserOutlined style="color: rgba(0, 0, 0, 0.25)" /></template>
+          <template #prefix>
+            <UserOutlined style="color: rgba(0, 0, 0, 0.25)" />
+          </template>
         </a-input>
       </a-form-item>
 
@@ -28,7 +30,9 @@
           v-model:value="formState.password"
           placeholder="密码：admin"
         >
-          <template #prefix><LockOutlined style="color: rgba(0, 0, 0, 0.25)" /></template>
+          <template #prefix>
+            <LockOutlined style="color: rgba(0, 0, 0, 0.25)" />
+          </template>
         </a-input-password>
       </a-form-item>
 
@@ -62,73 +66,73 @@
 </template>
 
 <script setup lang="ts">
-  import { UserOutlined, LockOutlined } from '@ant-design/icons-vue';
-  import { useStorage } from '@vueuse/core';
+import { UserOutlined, LockOutlined } from '@ant-design/icons-vue'
+import { useStorage } from '@vueuse/core'
 
-  const loginConfig = useStorage('login-config', {
-    remember: true,
-    username: 'admin',
-    password: 'admin',
-  });
+const loginConfig = useStorage('login-config', {
+  remember: true,
+  username: 'admin',
+  password: 'admin',
+})
 
-  interface FormState {
-    username: string;
-    password: string;
-    remember: boolean;
-  }
+interface FormState {
+  username: string
+  password: string
+  remember: boolean
+}
 
-  const formState = reactive<FormState>({
-    username: loginConfig.value.username,
-    password: loginConfig.value.password,
-    remember: loginConfig.value.remember,
-  });
+const formState = reactive<FormState>({
+  username: loginConfig.value.username,
+  password: loginConfig.value.password,
+  remember: loginConfig.value.remember,
+})
 
-  watch(
-    () => formState.remember,
-    (newValue) => {
-      loginConfig.value.remember = newValue;
-    },
-  );
+watch(
+  () => formState.remember,
+  (newValue) => {
+    loginConfig.value.remember = newValue
+  },
+)
 
-  const onFinish = (values: any) => {
-    const { remember } = loginConfig.value;
-    const { username, password } = values;
+const onFinish = (values: any) => {
+  const { remember } = loginConfig.value
+  const { username, password } = values
 
-    loginConfig.value.username = remember ? username : '';
-    loginConfig.value.password = remember ? password : '';
-  };
+  loginConfig.value.username = remember ? username : ''
+  loginConfig.value.password = remember ? password : ''
+}
 
-  const onFinishFailed = (errorInfo: any) => {
-    console.log('Failed:', errorInfo);
-  };
+const onFinishFailed = (errorInfo: any) => {
+  console.log('Failed:', errorInfo)
+}
 
-  const loginFormTitle = '登录 Ant Design Pro';
+const loginFormTitle = '登录 Ant Design Pro'
 </script>
 
 <style scoped>
-  .login-form-wrapper {
-    width: 320px;
-  }
+.login-form-wrapper {
+  width: 320px;
+}
 
-  .login-form-title {
-    color: #1d2129;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 32px;
-  }
+.login-form-title {
+  color: #1d2129;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}
 
-  .login-form-sub-title {
-    color: #86909c;
-    font-size: 16px;
-    line-height: 24px;
-  }
+.login-form-sub-title {
+  color: #86909c;
+  font-size: 16px;
+  line-height: 24px;
+}
 
-  .login-form-error-msg {
-    height: 32px;
-  }
+.login-form-error-msg {
+  height: 32px;
+}
 
-  .login-form-password-actions {
-    display: flex;
-    justify-content: space-between;
-  }
+.login-form-password-actions {
+  display: flex;
+  justify-content: space-between;
+}
 </style>

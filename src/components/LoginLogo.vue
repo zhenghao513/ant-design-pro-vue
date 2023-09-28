@@ -12,25 +12,25 @@
 <script setup lang="ts"></script>
 
 <style scoped>
-  .logo {
-    position: fixed;
-    top: 24px;
-    left: 22px;
-    z-index: 1;
-    display: inline-flex;
-    align-items: center;
-  }
+.logo {
+  position: fixed;
+  top: 24px;
+  left: 22px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+}
 
+.logo-text {
+  margin-right: 4px;
+  margin-left: 4px;
+  color: #f7f8fa;
+  font-size: 20px;
+}
+
+@media (max-width: 412px) {
   .logo-text {
-    margin-right: 4px;
-    margin-left: 4px;
-    color: #f7f8fa;
-    font-size: 20px;
+    color: #1d2129;
   }
-
-  @media (max-width: 412px) {
-    .logo-text {
-      color: #1d2129;
-    }
-  }
+}
 </style>
