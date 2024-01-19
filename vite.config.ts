@@ -6,6 +6,7 @@ import AutoImport from 'unplugin-auto-import/vite';
 import { resolve } from 'path';
 
 export default defineConfig({
+  base: '/ant-design-pro-vue/',
   resolve: {
     alias: [
       {
