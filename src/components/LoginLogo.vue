@@ -28,7 +28,7 @@
     font-size: 20px;
   }
 
-  @media (max-width: 412px) {
+  @media (max-width: 912px) {
     .logo-text {
       color: #1d2129;
     }
